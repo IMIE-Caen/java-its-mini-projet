@@ -11,4 +11,8 @@ package miniprojet;
  */
 public class Raichu extends Pikachu {
     
+    public Raichu(int hp) {
+        super(hp);
+    }
+    
 }

@@ -9,13 +9,6 @@ package miniprojet;
  *
  * @author clement
  */
-public class Pikachu extends PokemonElectrik {
-
-    public Pikachu(int hp) {
-        super(hp);
-    }
-
-
-    
+public abstract class Attaque {
+    public abstract void attaque(Pokemon attaquant, Pokemon adversaire);
 }
-

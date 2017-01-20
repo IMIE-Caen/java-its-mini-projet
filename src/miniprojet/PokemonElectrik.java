@@ -11,4 +11,8 @@ package miniprojet;
  */
 public abstract class PokemonElectrik extends Pokemon {
     
+    public PokemonElectrik(int hp) {
+        super(hp);
+    }
+    
 }

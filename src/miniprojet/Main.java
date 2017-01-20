@@ -5,6 +5,8 @@
  */
 package miniprojet;
 
+import java.util.ArrayList;
+
 public class Main {
 
     
@@ -12,8 +14,8 @@ public class Main {
         System.out.println("CoucouLesAmis");
         
         
-        Pokemon pika = new Pikachu();
-        Pokemon raich = new Raichu();
+        Pokemon pika = new Pikachu(50);
+        Pokemon raich = new Raichu(150);
         
         Pokemon[] tab = new Pokemon[2];
         
@@ -23,6 +25,19 @@ public class Main {
         for(Pokemon k : tab){
             System.out.println(k);
         }
+        
+        Attaque monAttaque = new AttaqueRandom();
+        
+        while(raich.getHp() > 0){
+            pika.attaque(raich, monAttaque);
+            System.out.println("-----------");
+            for(Pokemon k : tab){
+                System.out.println(k);
+            }
+        }
+        
+        
+        
         
         
         

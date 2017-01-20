@@ -5,17 +5,18 @@
  */
 package miniprojet;
 
+import java.util.Random;
+
 /**
  *
  * @author clement
  */
-public class Pikachu extends PokemonElectrik {
+public class AttaqueRandom extends Attaque {
 
-    public Pikachu(int hp) {
-        super(hp);
+    @Override
+    public void attaque(Pokemon attaquant, Pokemon adversaire) {
+       int degats = new Random().nextInt(11);
+       adversaire.infligerDegats(degats);   
     }
-
-
     
 }
-

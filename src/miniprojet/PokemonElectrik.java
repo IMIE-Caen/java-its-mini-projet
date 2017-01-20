@@ -9,14 +9,6 @@ package miniprojet;
  *
  * @author clement
  */
-public class MiniProjet {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("CoucouLesAmis");
-    }
+public abstract class PokemonElectrik extends Pokemon {
     
 }

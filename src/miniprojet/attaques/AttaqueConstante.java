@@ -3,21 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package miniprojet;
-
+package miniprojet.attaques;
+import miniprojet.*;
 import java.util.Random;
 
 /**
  *
  * @author clement
  */
-public class AttaqueRandom extends Attaque {
+public class AttaqueConstante extends Attaque {
 
     @Override
     public void attaque(Pokemon attaquant, Pokemon adversaire) {
-       int degats = new Random().nextInt(11);
-       adversaire.infligerDegats(degats);   
+       adversaire.infligerDegats(20);   
+       attaquant.infligerDegats(10);   
     }
     
 }
-//bonjour

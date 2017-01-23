@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package miniprojet;
+import miniprojet.attaques.*;
 
 import java.util.ArrayList;
 
@@ -15,33 +16,12 @@ public class Main {
         
         
         Pokemon pika = new Pikachu(50);
-        Pokemon raich = new Raichu(150);
+        Pokemon raich = new Raichu(50);
         
-        Pokemon[] tab = new Pokemon[2];
+        Combat comb = new Combat(pika, raich);
         
-        tab[0] = pika ;
-        tab[1] = raich ;
-        
-        for(Pokemon k : tab){
-            System.out.println(k);
-        }
-        
-        Attaque monAttaque = new AttaqueRandom();
-        
-        while(raich.getHp() > 0){
-            pika.attaque(raich, monAttaque);
-            System.out.println("-----------");
-            for(Pokemon k : tab){
-                System.out.println(k);
-            }
-        }
-        
-        
-        
-        
-        
-        
-        
+        System.out.println(comb);
+        comb.lancerCombat();
         
         
     }

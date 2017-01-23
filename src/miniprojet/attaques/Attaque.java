@@ -3,20 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package miniprojet;
-
-import java.util.Random;
+package miniprojet.attaques;
+import miniprojet.*;
 
 /**
  *
  * @author clement
  */
-public class AttaqueConstante extends Attaque {
+public abstract class Attaque {
+    public abstract void attaque(Pokemon attaquant, Pokemon adversaire);
 
     @Override
-    public void attaque(Pokemon attaquant, Pokemon adversaire) {
-       adversaire.infligerDegats(20);   
-       attaquant.infligerDegats(10);   
+    public String toString() {
+        return this.getClass().getSimpleName() ;
     }
     
 }

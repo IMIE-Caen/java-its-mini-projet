@@ -5,7 +5,8 @@
  */
 package miniprojet;
 
-import java.util.Random;
+import java.util.Scanner;
+import miniprojet.attaques.*;
 
 /**
  *
@@ -43,6 +44,23 @@ public abstract class Pokemon {
     @Override
     public String toString() {
         return this.getClass().getSimpleName() + " (HP: " + this.getHp() + ")";
+    }
+
+    public Attaque selectionnerAttaque() {
+        Attaque att1 = new AttaqueRandom();
+        Attaque att2 = new AttaqueConstante();
+        System.out.println("1. "+att1);
+        System.out.println("2. "+att2);
+        
+        Scanner reader = new Scanner(System.in);
+        int choix = reader.nextInt();
+        
+        switch(choix){
+            case 1 :
+                return att1;
+            default :
+                return att2;
+        }
     }
 
 

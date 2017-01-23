@@ -18,6 +18,9 @@ public class Main {
         Pokemon pika = new Pikachu(50);
         Pokemon raich = new Raichu(50);
         
+        pika.apprendre(new AttaqueRandom());
+        pika.apprendre(new AttaqueConstante());
+        
         Combat comb = new Combat(pika, raich);
         
         System.out.println(comb);

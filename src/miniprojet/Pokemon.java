@@ -5,6 +5,7 @@
  */
 package miniprojet;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 import miniprojet.attaques.*;
 
@@ -18,9 +19,20 @@ import miniprojet.attaques.*;
 public abstract class Pokemon {
     
     private int hp = 20;
+    private ArrayList<Attaque> attaquesApprises = new ArrayList<Attaque>();
     
     Pokemon( int hp){
         this.hp = hp;
+    }
+    
+    Pokemon(int hp, ArrayList<Attaque> attaques){
+        this(hp);
+        this.attaquesApprises = attaques;
+    }
+    
+    public void apprendre(Attaque attaque){
+        if(attaquesApprises.size() < 4)
+            attaquesApprises.add(attaque);
     }
     
     public int getHp(){
@@ -47,20 +59,16 @@ public abstract class Pokemon {
     }
 
     public Attaque selectionnerAttaque() {
-        Attaque att1 = new AttaqueRandom();
-        Attaque att2 = new AttaqueConstante();
-        System.out.println("1. "+att1);
-        System.out.println("2. "+att2);
+        
+        for(int i = 0 ; i < attaquesApprises.size() ; i ++){
+            System.out.println( i + ". " + attaquesApprises.get(i));
+        }
         
         Scanner reader = new Scanner(System.in);
         int choix = reader.nextInt();
         
-        switch(choix){
-            case 1 :
-                return att1;
-            default :
-                return att2;
-        }
+        return attaquesApprises.get(choix);
+
     }
 
 

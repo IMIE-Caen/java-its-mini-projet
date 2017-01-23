@@ -20,3 +20,4 @@ public class AttaqueRandom extends Attaque {
     }
     
 }
+//bonjour

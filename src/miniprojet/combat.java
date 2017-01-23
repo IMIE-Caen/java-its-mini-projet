@@ -12,5 +12,10 @@ public class combat {
 
      public combat() {
      }
+
+     @Override
+     public String toString() {
+          return "combat{" + '}';
+     }
      
 }

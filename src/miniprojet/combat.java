@@ -9,5 +9,8 @@ package miniprojet;
  * @author duche
  */
 public class combat {
+
+     public combat() {
+     }
      
 }
